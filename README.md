@@ -23,11 +23,11 @@ node index.js
 
 ## How It Works
 
-### Step 1 — Strip spaces
+### Step 1: Strip spaces
 
 User input may contain spaces (e.g. `4532 0151 6800 1000`). These are stripped first so only the raw digits are processed.
 
-### Step 2 — Identify card type (Regex)
+### Step 2: Identify card type (Regex)
 
 Each card network has a known prefix and length. A regex pattern is written for each one:
 
@@ -52,9 +52,9 @@ Each card network has a known prefix and length. A regex pattern is written for 
 - `[0-9]` matches any single digit.
 - `{15}` means exactly 15 repetitions of the previous token.
 
-### Step 3 — Luhn Algorithm
+### Step 3: Luhn Algorithm
 
-The regex only confirms the card _looks_ right. The Luhn algorithm checks whether the number is mathematically valid — every real card number passes this test.
+The regex only confirms the card _looks_ right. The Luhn algorithm checks whether the number is mathematically valid, and every real card number passes this test.
 
 **How it works:**
 
